@@ -5,7 +5,7 @@ function getToken() {
 }
 function getHeaders() {
   const headers = {
-    "Content-Type": "application/json",
+    "Content-Type": "application/json", // "Chave", "valor".
   };
 
   const token = getToken();
