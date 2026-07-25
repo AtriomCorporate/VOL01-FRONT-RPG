@@ -24,82 +24,27 @@
         <thead>
           <tr>
             <th>Nome</th>
-            <th>Descrição</th>
-            <th>Sistema</th>
+            <th>Classe</th>
+            <th>Raça</th>
             <th>Campanha</th>
             <th>Ações</th>
           </tr>
         </thead>
-        <tbody id="characterTable">
-          <tr>
-            <td>Ícaro</td>
-            <td>
-              Um garoto arogante que saio de sua casa para poder viver liver a
-              sua vida e acabou a chando uma garota que virou seu mundo de
-              cabeça para baixo.
-            </td>
-            <td>Derivado de F&M</td>
-            <td>Soul earther</td>
-            <td>
-              <div class="actions">
-                <button type="button" class="btn-editar" onclick="">
-                  Editar
-                </button>
-                <button type="button" class="btn-excluir" onclick="">
-                  Excluir
-                </button>
-            </td>
-          </tr>
-          <tr>
-            <td>Grimm</td>
-            <td>
-              Um garoto que sobrevivei a um desastre que firo o brasil de cabeça
-              para baixo, ele teve que sobreviver nessa tera sem lei e logo
-              depois de um tempo ele foi para a escola jujutsu no Japão para
-              aprender sobre essa energia.
-            </td>
-            <td>F&M 2.5</td>
-            <td>Grey word</td>
-            <td>
-              <div class="actions">
-                <button type="button" class="btn-editar" onclick="">
-                  Editar
-                </button>
-                <button type="button" class="btn-excluir" onclick="">
-                  Excluir
-                </button>
-            </td>
-          </tr>
-        </tbody>
+        <tbody id="characterTable"></tbody>
       </table>
 
       <div class="container">
         <h2>Criar ou editar personagem</h2>
         <form id="form">
           <label for="name">Nome do Personagem:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-          />
-          <label for="description">Descrição:</label>
-          <textarea
-            id="description"
-            name="description"
-          ></textarea>
+          <input type="text" id="name" name="name" />
+          <label for="class">Classe:</label>
+          <textarea id="class" name="class"></textarea>
 
-          <label for="system">Sistema:</label>
-          <input
-            type="text"
-            id="system"
-            name="system"
-          />
+          <label for="race">Raça:</label>
+          <input type="text" id="race" name="race" />
           <label for="campaign">Campanha:</label>
-          <input
-            type="text"
-            id="campaign"
-            name="campaign"
-          />
+          <input type="text" id="campaign" name="campaign" />
           <div id="feedback"></div>
           <button type="submit">Salvar</button>
         </form>
