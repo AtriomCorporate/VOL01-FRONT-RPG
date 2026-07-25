@@ -5,15 +5,15 @@ function mensage(mensagem) {
 
 const personagens = [
   {
-    nome: "Cascata",
-    descricao: "Um isekai onde todos do planeta foram para um novo mundo...",
-    sistema: "Derivado de HxH 5e com modificações do mestre",
+    nome: "Grimm",
+    class: "Especilista de combate",
+    race: "Humano",
     campanha: "Cascata",
   },
   {
-    nome: "3 lados de um triângulo",
-    descricao: "Um RPG de Jujutsu...",
-    sistema: "F&M",
+    nome: "Ashura",
+    class: "Artezão",
+    race: "Kishin",
     campanha: "3 lados de um triângulo",
   },
 ];
@@ -27,15 +27,15 @@ function renderTable() {
     const linha = document.createElement("tr");
 
     const tdNome = document.createElement("td");
-    const tdDescricao = document.createElement("td");
-    const tdSistema = document.createElement("td");
-    const tdPressonagen = document.createElement("td");
+    const tdClass = document.createElement("td");
+    const tdRace = document.createElement("td");
+    const tdCampaign = document.createElement("td");
     const tdAcoes = document.createElement("td");
 
     tdNome.textContent = personagem.nome;
-    tdDescricao.textContent = personagem.descricao;
-    tdSistema.textContent = personagem.sistema;
-    tdPressonagen.textContent = personagem.campanha;
+    tdClass.textContent = personagem.class;
+    tdRace.textContent = personagem.race;
+    tdCampaign.textContent = personagem.campanha;
 
     const divActions = document.createElement("div");
     divActions.className = "actions";
@@ -56,9 +56,9 @@ function renderTable() {
     tdAcoes.appendChild(divActions);
 
     linha.appendChild(tdNome);
-    linha.appendChild(tdDescricao);
-    linha.appendChild(tdSistema);
-    linha.appendChild(tdPressonagen);
+    linha.appendChild(tdClass);
+    linha.appendChild(tdRace);
+    linha.appendChild(tdCampaign);
     linha.appendChild(tdAcoes);
 
     table.appendChild(linha);
@@ -69,18 +69,18 @@ form.addEventListener("submit", function (event) {
   event.preventDefault();
 
   const name = document.getElementById("name").value.trim(); // .value.trim() remove os espaços em brando do inicio e do final.
-  const description = document.getElementById("description").value.trim();
-  const sistema = document.getElementById("system").value.trim();
+  const classe = document.getElementById("class").value.trim();
+  const race = document.getElementById("race").value.trim();
   const campanha = document.getElementById("campaign").value.trim();
 
-  if (name === "" || description === "" || sistema === "" || campanha === "") {
+  if (name === "" || classe === "" || race === "" || campanha === "") {
     mensage("Por favor, preencha todos os campos.");
     return;
   }
   const personagem = {
     nome: name,
-    descricao: description,
-    sistema: sistema,
+    class: classe,
+    race: race,
     campanha: campanha,
   };
 
